@@ -47,14 +47,15 @@ class Game:
               "tie if the same gesture is picked by both players, and no player will get a point that round.")
         print("First person to win 3 total rounds wins the game!")
         print()
-        # time.sleep(8)
-        exit_rules = input("Are you ready to play the game?")
-        while exit_rules.lower() == "no":
+        time.sleep(8)
+        done_reading_rules = True
+        while done_reading_rules:
+            exit_rules = input("Are you ready to play the game?")
             if exit_rules.lower() == "yes":
                 print()
                 self.choose_player_two()
             else:
-                exit_rules = input("Are you ready to play the game?")
+                continue
 
     def choose_player_two(self):
         self.player_two = input("Select <1> to play against another human, or <2> to play against the computer.")
