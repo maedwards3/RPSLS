@@ -90,7 +90,8 @@ class Game:
         while self.player_one.score < 3 and self.player_two.score < 3:
             print(f"{self.player_one.name} goes first.")
             self.game_rounds()
-        
+        self.display_winner()
+
     def game_rounds(self):
         while self.player_one.score < 3 and self.player_two.score < 3:
             self.player_one.gesture_selection()
@@ -248,3 +249,15 @@ class Game:
                     print()
                     print("*************************************************")
                     print()
+
+    def display_winner(self):
+        if self.player_one.score == 3:
+            print(f"{self.player_one.name} wins!!")
+            print()
+            print()
+            print()
+        elif self.player_two.score == 3:
+            print(f"{self.player_two.name} wins!!")
+            print()
+            print()
+            print()
