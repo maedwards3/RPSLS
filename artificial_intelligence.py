@@ -1,4 +1,5 @@
 import random
+import time
 from player import Player
 
 
@@ -7,4 +8,5 @@ class AI(Player):
         super().__init__()
 
     def gesture_selection(self):
-        random.choice(self.list_of_gestures)
+        time.sleep(2)
+        self.chosen_gesture = random.choice(self.list_of_gestures)
